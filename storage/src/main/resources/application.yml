@@ -1,7 +1,17 @@
 otel:
   exporter:
     otlp:
-      endpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:http://localhost:4317}
-      protocol: grpc
+      traces:
+        endpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:http://localhost:4317}
+        protocol: grpc
   sdk:
     disabled: ${OTEL_SDK_DISABLED:false} # Disable OpenTelemetry
+  logs:
+    exporter: none
+  metrics:
+    exporter: none
+
+management:
+  tracing:
+    sampling:
+      probability: 0.1

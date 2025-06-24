@@ -11,3 +11,4 @@ Spring Boot multi-module Gradle project.
 
 ## References
 - [Creating a Multi Module Project](https://spring.io/guides/gs/multi-module)
+- [Spring Boot Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.otel-otlp)

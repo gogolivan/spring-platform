@@ -8,11 +8,14 @@ import io.opentelemetry.sdk.trace.data.LinkData;
 import io.opentelemetry.sdk.trace.samplers.Sampler;
 import io.opentelemetry.sdk.trace.samplers.SamplingDecision;
 import io.opentelemetry.sdk.trace.samplers.SamplingResult;
+import io.opentelemetry.semconv.UrlAttributes;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.regex.Pattern;
 
 @AutoConfiguration
 @Slf4j
@@ -29,10 +32,12 @@ public class OtelAutoConfiguration {
 
 
 class ActuatorRoutingSampler implements Sampler {
-
     @Override
     public SamplingResult shouldSample(Context parentContext, String traceId, String name, SpanKind spanKind, Attributes attributes, List<LinkData> parentLinks) {
-        if (name != null && name.startsWith("/actuator")) {
+        String pattern = "^/actuator";
+        String url = Objects.requireNonNullElse(attributes.get(UrlAttributes.URL_PATH), "");
+
+        if (SpanKind.SERVER.equals(spanKind) && Pattern.matches(pattern, url)) {
             return SamplingResult.create(SamplingDecision.DROP);
         }
 

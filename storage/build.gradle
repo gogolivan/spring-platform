@@ -35,6 +35,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation('io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter')
+    implementation('io.micrometer:micrometer-tracing-bridge-otel')
+    implementation('io.opentelemetry:opentelemetry-exporter-otlp')
     implementation(project(':spring-platform-spring-boot-starter'))
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
