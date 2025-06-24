@@ -1,0 +1,5 @@
+rootProject.name = 'spring-platform'
+
+include('gateway')
+include('storage')
+include('notification')
