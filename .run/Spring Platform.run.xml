@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spring Platform" type="CompoundRunConfigurationType">
+    <toRun name="GatewayApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="NotificationApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="StorageApplication" type="SpringBootApplicationConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

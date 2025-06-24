@@ -1,5 +1,6 @@
 rootProject.name = 'spring-platform'
 
+include('spring-platform-spring-boot-starter')
 include('gateway')
 include('storage')
 include('notification')

@@ -1,0 +1,10 @@
+== Prerequisites
+
+- JDK 21
+
+- Docker
+
+[IMPORTANT]
+====
+If you're using a Mac with an Apple Silicon processor, Rosetta 2 is required.
+====
