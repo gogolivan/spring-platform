@@ -26,10 +26,13 @@ repositories {
 }
 
 ext {
-    set('springGrpcVersion', "0.8.0")
+    set('springGrpcVersion', libs.versions.spring.grpc.get())
 }
 
 dependencies {
+    implementation platform(project(":spring-platform-dependencies"))
+    implementation(project(':spring-platform-spring-boot-starter'))
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-web'

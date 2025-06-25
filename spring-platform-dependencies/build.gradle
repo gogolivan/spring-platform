@@ -1,0 +1,26 @@
+plugins {
+    id 'java-platform'
+}
+
+group = 'com.github.gogolivan.springplatform'
+version = '0.0.1-SNAPSHOT'
+
+javaPlatform {
+    allowDependencies()
+}
+
+ext {
+    set('springCloudVersion', libs.versions.spring.cloud.get())
+    set('opentelemetryVersion', libs.versions.opentelemetry.get())
+}
+
+dependencies {
+    // Import BOM
+    api(platform("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"))
+    api(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:${opentelemetryVersion}"))
+
+    constraints {
+        api(libs.guava)
+        api(libs.commons.lang3)
+    }
+}

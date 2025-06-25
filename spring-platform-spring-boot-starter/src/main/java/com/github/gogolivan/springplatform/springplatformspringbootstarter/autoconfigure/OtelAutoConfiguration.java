@@ -10,6 +10,7 @@ import io.opentelemetry.sdk.trace.samplers.SamplingDecision;
 import io.opentelemetry.sdk.trace.samplers.SamplingResult;
 import io.opentelemetry.semconv.UrlAttributes;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
@@ -35,7 +36,7 @@ class ActuatorRoutingSampler implements Sampler {
     @Override
     public SamplingResult shouldSample(Context parentContext, String traceId, String name, SpanKind spanKind, Attributes attributes, List<LinkData> parentLinks) {
         String pattern = "^/actuator";
-        String url = Objects.requireNonNullElse(attributes.get(UrlAttributes.URL_PATH), "");
+        String url = Objects.requireNonNullElse(attributes.get(UrlAttributes.URL_PATH), StringUtils.EMPTY);
 
         if (SpanKind.SERVER.equals(spanKind) && Pattern.matches(pattern, url)) {
             return SamplingResult.create(SamplingDecision.DROP);
