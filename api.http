@@ -1,2 +1,6 @@
 GET localhost:8081
 Authorization: Bearer {{$auth.token("Keycloak")}}
+
+
+###
+GRPC localhost:9093/Notification/SendNotification
