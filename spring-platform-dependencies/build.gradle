@@ -11,12 +11,14 @@ javaPlatform {
 
 ext {
     set('springCloudVersion', libs.versions.spring.cloud.get())
+    set('springGrpcVersion', libs.versions.spring.grpc.get())
     set('opentelemetryVersion', libs.versions.opentelemetry.get())
 }
 
 dependencies {
     // Import BOM
     api(platform("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"))
+    api(platform("org.springframework.grpc:spring-grpc-dependencies:${springGrpcVersion}"))
     api(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:${opentelemetryVersion}"))
 
     constraints {

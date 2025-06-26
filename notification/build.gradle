@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.dependency.management)
     alias(libs.plugins.graalvm.native)
-    alias(libs.plugins.protobuf)
 }
 
 group = 'com.github.gogolivan.springplatform'
@@ -25,13 +24,10 @@ repositories {
     mavenCentral()
 }
 
-ext {
-    set('springGrpcVersion', libs.versions.spring.grpc.get())
-}
-
 dependencies {
     implementation platform(project(":spring-platform-dependencies"))
     implementation(project(':spring-platform-spring-boot-starter'))
+    implementation(project(':proto'))
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
@@ -49,31 +45,6 @@ dependencies {
     testImplementation 'org.springframework.grpc:spring-grpc-test'
     testImplementation 'org.testcontainers:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.grpc:spring-grpc-dependencies:${springGrpcVersion}"
-    }
-}
-
-protobuf {
-    protoc {
-        artifact = 'com.google.protobuf:protoc'
-    }
-    plugins {
-        grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java'
-        }
-    }
-    generateProtoTasks {
-        all()*.plugins {
-            grpc {
-                option 'jakarta_omit'
-                option '@generated=omit'
-            }
-        }
-    }
 }
 
 tasks.named('test') {

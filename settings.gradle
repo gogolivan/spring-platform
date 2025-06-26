@@ -2,6 +2,7 @@ rootProject.name = 'spring-platform'
 
 include('spring-platform-dependencies')
 include('spring-platform-spring-boot-starter')
+include('proto')
 include('gateway')
 include('storage')
 include('notification')

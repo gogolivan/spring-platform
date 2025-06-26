@@ -13,3 +13,4 @@ Spring Boot multi-module Gradle project.
 - [Gradle Version Catalogs](https://docs.gradle.org/current/userguide/version_catalogs.html)
 - [Gradle Platform](https://docs.gradle.org/current/userguide/platforms.html)
 - [Spring Boot Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.otel-otlp)
+- [Spring GRPC](https://docs.spring.io/spring-grpc/reference/index.html)
