@@ -1,6 +1,11 @@
 plugins {
     id 'java'
-    alias(libs.plugins.graalvm.native)
+    alias(libs.plugins.graalvm.native) apply false
+}
+
+// Enable native image build
+if (project.hasProperty('native') && project.native.toString() == 'true') {
+    apply plugin: 'org.graalvm.buildtools.native'
 }
 
 group = 'com.github.gogolivan.springplatform'

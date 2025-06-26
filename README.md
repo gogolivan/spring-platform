@@ -12,6 +12,10 @@ _Spring Boot_ multi-module _Gradle_ project.
 ### notification
 ### storage
 
+## Native images
+Enable native images build by setting the native property in the `gradle.properties` file 
+or running gradle command with property flag `-Pnative=true`.
+
 ## Best Practices
 - Use environment variables with defaults in _Spring_ properties
 - Centralized version catalog `gradle/libs.versions.toml`
