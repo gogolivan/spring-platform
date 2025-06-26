@@ -14,4 +14,4 @@ otel:
 management:
   tracing:
     sampling:
-      probability: 0.1
+      probability: ${MANAGEMENT.TRACING.SAMPLING.PROBABILITY:0.1}
