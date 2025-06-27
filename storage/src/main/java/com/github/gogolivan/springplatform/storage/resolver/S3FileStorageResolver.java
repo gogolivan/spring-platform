@@ -12,7 +12,7 @@ public class S3FileStorageResolver implements FileStorageResolver {
     }
 
     @Override
-    public void save(String path, InputStream content) {
+    public void store(String path, InputStream content) {
 
     }
 

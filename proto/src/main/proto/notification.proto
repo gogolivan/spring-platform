@@ -7,14 +7,17 @@ option java_outer_classname = "NotificationProto";
 package com.github.gogolivan.springplatform.notification;
 
 service Notification {
+  // Unary
   rpc SendNotification(NotificationRequest) returns (NotificationReply) {}
-  rpc StreamNotification(NotificationRequest) returns (NotificationReply) {}
+
+  // Streaming
+  rpc StreamNotification(NotificationRequest) returns (stream NotificationReply) {}
 }
 
 message NotificationRequest {
-  string id = 1;
+  string message = 1;
 }
 
 message NotificationReply {
-  string message = 1;
+
 }

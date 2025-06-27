@@ -8,7 +8,7 @@ import java.io.InputStream;
 public interface FileStorageResolver {
     InputStream load(String path);
 
-    void save(String path, InputStream content);
+    void store(String path, InputStream content);
 
     void delete(String path);
 }

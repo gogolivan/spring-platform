@@ -6,4 +6,5 @@ import java.io.InputStream;
 
 public interface FileStorageService {
     InputStream load(FileStorageType type, String path);
+    void store(FileStorageType type, String path, InputStream inputStream);
 }

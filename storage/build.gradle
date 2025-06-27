@@ -31,6 +31,7 @@ repositories {
 dependencies {
     implementation platform(project(":spring-platform-dependencies"))
     implementation(project(':spring-platform-spring-boot-starter'))
+    implementation(project(':proto'))
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
@@ -38,11 +39,14 @@ dependencies {
     implementation('io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter')
     implementation('io.micrometer:micrometer-tracing-bridge-otel')
     implementation('io.opentelemetry:opentelemetry-exporter-otlp')
+    implementation 'io.grpc:grpc-services'
+    implementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.grpc:spring-grpc-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
