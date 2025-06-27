@@ -4,6 +4,7 @@ option java_multiple_files = true;
 option java_package = "com.github.gogolivan.springplatform.notification";
 option java_outer_classname = "NotificationProto";
 
+package com.github.gogolivan.springplatform.notification;
 
 service Notification {
   rpc SendNotification(NotificationRequest) returns (NotificationReply) {}

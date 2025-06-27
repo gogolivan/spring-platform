@@ -2,5 +2,5 @@ GET localhost:8081
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
 
-###
-GRPC localhost:9093/Notification/SendNotification
+### Send Notification
+GRPC localhost:9093/com.github.gogolivan.springplatform.notification.Notification/SendNotification
