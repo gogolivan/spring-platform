@@ -10,14 +10,14 @@ spring:
         webmvc:
           routes:
             - id: notification
-              uri: http://localhost:8083
+              uri: ${SPRING_CLOUD_GATEWAY_ROUTE_NOTIFICATION:http://localhost:8083}
               predicates:
                 - Path=/notification/**
               filters:
                 - RewritePath=/notification/?(?<segment>.*), /$\{segment}
-                - TokenRelay= # spring-boot-starter-oauth2-client required
+                - TokenRelay= # Required spring-boot-starter-oauth2-client dependency
             - id: storage
-              uri: http://localhost:8083
+              uri: ${SPRING_CLOUD_GATEWAY_ROUTE_STORAGE:http://localhost:8084}
               predicates:
                 - Path=/storage/**
               filters:
@@ -41,4 +41,4 @@ otel:
 management:
   tracing:
     sampling:
-      probability: 0.1
+      probability: ${MANAGEMENT_TRACING_SAMPLING_PROBABILITY:0.1}
