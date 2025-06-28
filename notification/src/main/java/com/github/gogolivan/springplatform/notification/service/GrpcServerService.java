@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
     @Override
     public void sendNotification(NotificationRequest request, StreamObserver<NotificationReply> responseObserver) {
-        log.debug("Sending notification {}", request.getMessage());
+        log.debug("Notification {}", request.getMessage());
 
         var notificationReply = NotificationReply.newBuilder()
                 .build();
@@ -23,7 +23,7 @@ public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
 
     @Override
     public void streamNotification(NotificationRequest request, StreamObserver<NotificationReply> responseObserver) {
-        log.debug("Sending streaming notification {}", request.getMessage());
+        log.debug("Streaming notification {}", request.getMessage());
 
         var notificationReply = NotificationReply.newBuilder()
                 .build();
