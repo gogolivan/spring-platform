@@ -5,7 +5,7 @@ import java.io.InputStream;
 /**
  * Strategy interface for resolving storage provider.
  */
-public interface FileStorageResolver {
+public interface StorageResolver {
     InputStream load(String path);
 
     void store(String path, InputStream content);

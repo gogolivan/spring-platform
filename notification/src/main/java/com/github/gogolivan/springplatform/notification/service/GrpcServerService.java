@@ -7,9 +7,6 @@ import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
 @Slf4j
 public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
@@ -17,7 +14,7 @@ public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
     public void sendNotification(NotificationRequest request, StreamObserver<NotificationReply> responseObserver) {
         log.debug("Sending notification {}", request.getMessage());
 
-        NotificationReply notificationReply = NotificationReply.newBuilder()
+        var notificationReply = NotificationReply.newBuilder()
                 .build();
 
         responseObserver.onNext(notificationReply);
@@ -28,7 +25,7 @@ public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
     public void streamNotification(NotificationRequest request, StreamObserver<NotificationReply> responseObserver) {
         log.debug("Sending streaming notification {}", request.getMessage());
 
-        NotificationReply notificationReply = NotificationReply.newBuilder()
+        var notificationReply = NotificationReply.newBuilder()
                 .build();
 
         responseObserver.onNext(notificationReply);

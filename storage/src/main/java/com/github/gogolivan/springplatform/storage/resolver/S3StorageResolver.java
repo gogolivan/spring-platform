@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.io.InputStream;
 
 @Service
-public class S3FileStorageResolver implements FileStorageResolver {
+public class S3StorageResolver implements StorageResolver {
     @Override
     public InputStream load(String path) {
         return null;
