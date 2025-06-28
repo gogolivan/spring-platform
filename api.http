@@ -1,6 +1,10 @@
+###
 GET localhost:8081
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
+### Storage Load
+GET http://localhost:8084/file?path=
+Authorization: Bearer {{$auth.token("Keycloak")}}
 
-### Send Notification
+### Notification Send
 GRPC localhost:9093/com.github.gogolivan.springplatform.notification.Notification/SendNotification
