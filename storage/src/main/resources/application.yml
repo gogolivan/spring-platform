@@ -1,6 +1,10 @@
 server:
   port: 8084
 
+security:
+  ignore:
+    patterns: ${SECURITY_IGNORE_PATTERNS:/actuator/**}
+
 spring:
   grpc:
     server:

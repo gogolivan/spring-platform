@@ -34,10 +34,12 @@ dependencies {
     implementation(project(':proto'))
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.grpc:grpc-services'
     implementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-graphql'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation 'io.grpc:grpc-services'
     implementation('io.micrometer:micrometer-tracing-bridge-otel')
     implementation('io.opentelemetry:opentelemetry-exporter-otlp')
     compileOnly 'org.projectlombok:lombok'
@@ -47,6 +49,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
     testImplementation 'org.springframework.grpc:spring-grpc-test'
+    testImplementation 'org.springframework.graphql:spring-graphql-test'
     testImplementation 'org.testcontainers:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

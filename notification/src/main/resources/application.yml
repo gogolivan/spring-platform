@@ -1,6 +1,10 @@
 server:
   port: 8083
 
+security:
+  ignore:
+    patterns: ${SECURITY_IGNORE_PATTERNS:/actuator/**,/graphiql}
+
 spring:
   grpc:
     server:

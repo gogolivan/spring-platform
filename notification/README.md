@@ -1,0 +1,8 @@
+# Notification
+
+## GraphQL
+### GraphiQL
+http://localhost:8083/graphiql
+
+## References
+- [Spring for GraphQL](https://spring.io/projects/spring-graphql)
