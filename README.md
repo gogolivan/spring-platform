@@ -15,12 +15,13 @@ spring.threads.virtual.enabled=true
 
 ## Best Practices
 - Use environment variables with defaults in _Spring_ properties
-- Centralized version catalog `gradle/libs.versions.toml`
+- Centralized version management using *Gradle* catalog `gradle/libs.versions.toml`
 
 ## References
 - [Creating a Multi Module Gradle Project](https://spring.io/guides/gs/multi-module)
 - [Gradle Version Catalogs](https://docs.gradle.org/current/userguide/version_catalogs.html)
 - [Gradle Platform](https://docs.gradle.org/current/userguide/platforms.html)
-- [Spring Security](https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html)
 - [Spring Boot Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.otel-otlp)
+- [Spring Boot Virtual Threads](https://docs.spring.io/spring-boot/reference/features/spring-application.html#features.spring-application.virtual-threads)
+- [Spring Security OAuth2 Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html)
 - [Spring GRPC](https://docs.spring.io/spring-grpc/reference/index.html)
