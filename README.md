@@ -13,6 +13,10 @@ or running gradle command with property flag `-Pnative=true`.
 spring.threads.virtual.enabled=true
 ```
 
+## Spring Security
+### RBAC
+By default, _Spring_ expects roles to be prefixes with `ROLE_`.
+
 ## Best Practices
 - Use environment variables with defaults in _Spring_ properties
 - Centralized version management using *Gradle* catalog `gradle/libs.versions.toml`
