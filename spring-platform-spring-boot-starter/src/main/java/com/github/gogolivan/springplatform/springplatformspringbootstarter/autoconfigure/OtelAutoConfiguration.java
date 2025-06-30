@@ -1,5 +1,6 @@
 package com.github.gogolivan.springplatform.springplatformspringbootstarter.autoconfigure;
 
+import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.trace.SpanKind;
 import io.opentelemetry.context.Context;
@@ -12,6 +13,7 @@ import io.opentelemetry.semconv.UrlAttributes;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
@@ -20,17 +22,17 @@ import java.util.regex.Pattern;
 
 @AutoConfiguration
 @Slf4j
+@ConditionalOnClass(OpenTelemetry.class)
 public class OtelAutoConfiguration {
     @Bean
     public AutoConfigurationCustomizerProvider otelCustomizer() {
-        log.info("Creating otelCustomizer");
+        log.info("Configuring OpenTelemetry");
         return p ->
                 p.addSamplerCustomizer(
                         (fallback, config) ->
                                 new ActuatorRoutingSampler());
     }
 }
-
 
 class ActuatorRoutingSampler implements Sampler {
     @Override

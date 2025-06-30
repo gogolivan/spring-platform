@@ -6,6 +6,9 @@ security:
     patterns: ${SECURITY_IGNORE_PATTERNS:/actuator/**,/graphiql}
 
 spring:
+  graphql:
+    graphiql:
+      enabled: ${SPRING_GRAPHQL_GRAPHIQL_ENABLED:true}
   grpc:
     server:
       enabled: ${GRPC_SERVER_ENABLED:true}

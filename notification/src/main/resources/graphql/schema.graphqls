@@ -1,8 +1,24 @@
+scalar DateTime@specifiedBy(url: "https://scalars.graphql.org/andimarek/date-time.html")
+
 type Query {
-    notification(id: ID!): Notification
+    """
+    Get notification by username.
+    """
+    notification(username: String!): Notification
+}
+
+
+enum NotificationStatus {
+    SENT
+    FAILED
 }
 
 type Notification {
     id: ID!
-    message: String!
+    username: String!
+    title: String!
+    message: String
+    notificationStatus: NotificationStatus!
+    isRead: Boolean
+    createdAt: DateTime!
 }

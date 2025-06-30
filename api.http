@@ -1,14 +1,23 @@
-###
-GET localhost:8081
-Authorization: Bearer {{$auth.token("Keycloak")}}
-
 ### Storage Load
-GET http://localhost:8084/file?path=
+GET localhost:8084/file?path=
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
 ### Gateway Storage Load
-GET http://localhost:8082/storage/file?path=
+GET localhost:8082/storage/file?path=
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
 ### Notification Send
 GRPC localhost:9093/com.github.gogolivan.springplatform.notification.Notification/SendNotification
+
+### Notification Read
+GRAPHQL localhost:8083/graphql
+Authorization: Bearer {{$auth.token("Keycloak")}}
+
+query {
+    notification(username: "admin") {
+        id,
+        title,
+        message,
+        createdAt
+    }
+}

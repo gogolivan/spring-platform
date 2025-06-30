@@ -1,2 +1,3 @@
 com.github.gogolivan.springplatform.springplatformspringbootstarter.autoconfigure.OtelAutoConfiguration
 com.github.gogolivan.springplatform.springplatformspringbootstarter.autoconfigure.SecurityConfig
+com.github.gogolivan.springplatform.springplatformspringbootstarter.autoconfigure.GraphQlConfiguration

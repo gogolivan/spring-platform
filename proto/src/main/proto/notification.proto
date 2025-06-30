@@ -1,10 +1,12 @@
 syntax = "proto3";
 
+package com.github.gogolivan.springplatform.notification;
+
+import "google/protobuf/timestamp.proto";
+
 option java_multiple_files = true;
 option java_package = "com.github.gogolivan.springplatform.notification";
 option java_outer_classname = "NotificationProto";
-
-package com.github.gogolivan.springplatform.notification;
 
 service Notification {
   // Unary
@@ -12,12 +14,31 @@ service Notification {
 
   // Streaming
   rpc StreamNotification(NotificationRequest) returns (stream NotificationReply) {}
+
+  // Bulk
+  rpc BatchSendNotifications(BatchNotificationRequest) returns (BatchNotificationReply);
+}
+
+enum NotificationStatus {
+  SENT = 0;
+  FAILED = 1;
 }
 
 message NotificationRequest {
-  string message = 1;
+  string user_id = 1;
+  string title = 2;
+  string message = 3;
 }
 
 message NotificationReply {
+  string id = 1;
+  google.protobuf.Timestamp created_at = 3;
+}
 
+message BatchNotificationRequest {
+  repeated NotificationRequest notifications = 1;
+}
+
+message BatchNotificationReply {
+  repeated NotificationReply replies = 1;
 }

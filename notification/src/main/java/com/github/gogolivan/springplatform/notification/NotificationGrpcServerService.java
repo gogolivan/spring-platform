@@ -1,15 +1,12 @@
-package com.github.gogolivan.springplatform.notification.service;
+package com.github.gogolivan.springplatform.notification;
 
-import com.github.gogolivan.springplatform.notification.NotificationGrpc;
-import com.github.gogolivan.springplatform.notification.NotificationReply;
-import com.github.gogolivan.springplatform.notification.NotificationRequest;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
+public class NotificationGrpcServerService extends NotificationGrpc.NotificationImplBase {
     @Override
     public void sendNotification(NotificationRequest request, StreamObserver<NotificationReply> responseObserver) {
         log.debug("Notification {}", request.getMessage());
@@ -30,5 +27,10 @@ public class GrpcServerService extends NotificationGrpc.NotificationImplBase {
 
         responseObserver.onNext(notificationReply);
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public void batchSendNotifications(BatchNotificationRequest request, StreamObserver<BatchNotificationReply> responseObserver) {
+        super.batchSendNotifications(request, responseObserver);
     }
 }
