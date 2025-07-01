@@ -39,6 +39,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-graphql'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     implementation 'io.grpc:grpc-services'
     implementation('io.micrometer:micrometer-tracing-bridge-otel')
     implementation('io.opentelemetry:opentelemetry-exporter-otlp')

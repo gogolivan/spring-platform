@@ -4,20 +4,42 @@ _Spring Boot_ multi-module _Gradle_ project.
 ![System Architecture Dark](./docs/images/system-architecture-dark.svg#gh-dark-mode-only)
 ![System Architecture Light](./docs/images/system-architecture-light.svg#gh-light-mode-only)
 
-## Native images
+
+## Modules
+### Spring Platform Dependencies
+Manages shared dependency versions.
+
+### Spring Platform Spring Boot Starter
+Provides _Spring_ default configurations.
+
+### Proto
+Defines shared _Protocol Buffers_ (.proto) definitions.
+
+### Gateway
+Handles routing.
+
+### Notification
+Manages notifications using a **3-layer architecture**.
+Expose _GraphQL_ endpoint and uses MongoDB for data persistence.
+
+### Storage
+Handles the storage, deletion, and updating of files using a **hexagonal architecture**.
+
+## Features
+### Native images
 Enable native images build by setting the native property in the `gradle.properties` file 
 or running gradle command with property flag `-Pnative=true`.
 
-## Virtual Thread
+### Virtual Thread
 ```properties
 spring.threads.virtual.enabled=true
 ```
 
-## Spring Security
+### Security
 ### RBAC
 By default, _Spring_ expects roles to be prefixes with `ROLE_`.
 
-## Observability
+### Observability
 https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started/
 
 ## References

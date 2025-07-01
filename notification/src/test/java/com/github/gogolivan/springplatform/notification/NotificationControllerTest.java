@@ -1,5 +1,6 @@
 package com.github.gogolivan.springplatform.notification;
 
+import com.github.gogolivan.springplatform.notification.controller.NotificationController;
 import com.github.gogolivan.springplatform.springplatformspringbootstarter.autoconfigure.GraphQlConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
