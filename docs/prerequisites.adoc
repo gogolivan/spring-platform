@@ -8,3 +8,12 @@
 ====
 If you're using a Mac with an Apple Silicon processor, Rosetta 2 is required.
 ====
+
+=== Recommendations
+==== Plugins
+===== IntelliJ IDEA
+- https://plugins.jetbrains.com/plugin/8097-graphql[GraphQL]
+- https://plugins.jetbrains.com/plugin/22807-spring-graphql[Spring GraphQL]
+- https://plugins.jetbrains.com/bundles/8-big-data-tools[Kafka]
+
+===== Visual Studio Code
