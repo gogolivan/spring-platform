@@ -1,4 +1,4 @@
-package com.github.gogolivan.springplatform.storage.entity;
+package com.github.gogolivan.springplatform.storage.adapter.jpa.file;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import java.util.UUID;
 @Table(name = "FILES")
 @Getter
 @Setter
-public class File {
+public class FileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
