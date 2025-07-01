@@ -20,14 +20,16 @@ By default, _Spring_ expects roles to be prefixes with `ROLE_`.
 ## Observability
 https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started/
 
-## Best Practices
+## Guidelines
+- Use `checkstyle` to perform quality checks
+- Use version catalog `gradle/libs.versions.toml`
 - Use environment variables with defaults in _Spring_ properties
-- Centralized version management using *Gradle* catalog `gradle/libs.versions.toml`
 
 ## References
 - [Creating a Multi Module Gradle Project](https://spring.io/guides/gs/multi-module)
 - [Gradle Version Catalogs](https://docs.gradle.org/current/userguide/version_catalogs.html)
 - [Gradle Platform](https://docs.gradle.org/current/userguide/platforms.html)
+- [Checkstyle](https://checkstyle.org/)
 - [Spring Boot Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.otel-otlp)
 - [Spring Boot Virtual Threads](https://docs.spring.io/spring-boot/reference/features/spring-application.html#features.spring-application.virtual-threads)
 - [Spring Security OAuth2 Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html)

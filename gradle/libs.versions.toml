@@ -9,6 +9,7 @@ opentelemetry = "2.16.0"
 guava = "33.4.8-jre"
 commons-lang3 = "3.17.0"
 graphql-java-extended-scalars = "22.0"
+checkstyle = "10.12.4"
 
 [libraries]
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
