@@ -6,9 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.InputStream;
+import java.util.UUID;
 
 @RestController
-@RequestMapping("/file")
+@RequestMapping("/files")
 public class FileController {
     private final FileService fileService;
 
@@ -17,8 +18,8 @@ public class FileController {
         this.fileService = fileService;
     }
 
-    @GetMapping
-    public ResponseEntity<InputStream> load(@RequestParam String path) {
-        return ResponseEntity.ok(fileService.load(path));
+    @GetMapping("/{id}")
+    public ResponseEntity<InputStream> load(@PathVariable UUID id) {
+        return ResponseEntity.ok(fileService.load(id));
     }
 }

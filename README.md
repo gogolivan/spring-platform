@@ -17,6 +17,9 @@ spring.threads.virtual.enabled=true
 ### RBAC
 By default, _Spring_ expects roles to be prefixes with `ROLE_`.
 
+## Observability
+https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started/
+
 ## Best Practices
 - Use environment variables with defaults in _Spring_ properties
 - Centralized version management using *Gradle* catalog `gradle/libs.versions.toml`

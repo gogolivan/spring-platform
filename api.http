@@ -1,9 +1,9 @@
 ### Storage Load
-GET localhost:8084/file?path=
+GET localhost:8084/files/00000000-0000-0000-0000-000000000000
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
 ### Gateway Storage Load
-GET localhost:8082/storage/file?path=
+GET localhost:8082/storage/files/00000000-0000-0000-0000-000000000000
 Authorization: Bearer {{$auth.token("Keycloak")}}
 
 ### Notification Send
