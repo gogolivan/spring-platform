@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'checkstyle'
     alias(libs.plugins.graalvm.native) apply false
 }
 
@@ -13,6 +12,8 @@ group = 'com.github.gogolivan.springplatform'
 version = '1.0-SNAPSHOT'
 
 allprojects {
+    apply plugin: 'checkstyle'
+
     repositories {
         mavenCentral()
     }
@@ -20,4 +21,9 @@ allprojects {
     checkstyle {
         toolVersion = libs.versions.checkstyle
     }
+
+    dependencies {
+        checkstyle 'com.puppycrawl.tools:checkstyle:10.26.1'
+    }
+
 }
