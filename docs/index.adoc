@@ -3,7 +3,8 @@
 :toc-title: Table of Contents
 :toclevels: 2
 
-
 include::prerequisites.adoc[]
 
 include::architecture.adoc[]
+
+include::guidelines.adoc[]

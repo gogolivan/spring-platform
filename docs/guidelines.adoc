@@ -1,0 +1,4 @@
+== Guidelines
+- Use `checkstyle` to perform quality checks
+- Use version catalog `gradle/libs.versions.toml`
+- Use environment variables with defaults in _Spring_ properties
