@@ -20,9 +20,10 @@ dependencies {
     api(platform("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"))
     api(platform("org.springframework.grpc:spring-grpc-dependencies:${springGrpcVersion}"))
     api(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:${opentelemetryVersion}"))
+    api(libs.guava)
+    api(libs.commons.lang3)
+    api(libs.archunit)
 
     constraints {
-        api(libs.guava)
-        api(libs.commons.lang3)
     }
 }

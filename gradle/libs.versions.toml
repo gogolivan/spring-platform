@@ -10,11 +10,13 @@ guava = "33.4.8-jre"
 commons-lang3 = "3.17.0"
 graphql-java-extended-scalars = "22.0"
 checkstyle = "10.12.4"
+archunit = "1.4.1"
 
 [libraries]
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version.ref = "commons-lang3" }
 graphql-java-extended-scalars = { group = "com.graphql-java", name = "graphql-java-extended-scalars", version.ref = "graphql-java-extended-scalars" }
+archunit = { group = "com.tngtech.archunit", name = "archunit-junit5", version.ref = "archunit" }
 
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }

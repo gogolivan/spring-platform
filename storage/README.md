@@ -9,8 +9,9 @@ Package organization is structured by domain.
 
 ### Debugging
 
-With `dev` Spring profile enabled, query logging execution statics are activated.
+With the `dev` _Spring_ profile, query execution statistics logging is enabled.
 
 ## References
 
 - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/index.html)
+- [ArchUnit](https://www.archunit.org/)
