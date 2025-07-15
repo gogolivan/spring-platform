@@ -1,4 +1,4 @@
-package com.github.gogolivan.springplatform.storage.adapter.jpa.file;
+package com.github.gogolivan.springplatform.storage.adapter.jpa.file.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -15,9 +15,12 @@ public class FileEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(name = "NAME")
-    private String name;
+    @Column(name = "FILE_NAME")
+    private String fileName;
 
     @Column(name = "PATH")
     private String path;
+
+    @Column(name = "CONTENT_TYPE")
+    private String contentType;
 }

@@ -51,6 +51,7 @@ spring:
       on-profile: dev
   jpa:
     show-sql: true
+    open-in-view: true
     properties:
       hibernate:
         generate_statistics: true
