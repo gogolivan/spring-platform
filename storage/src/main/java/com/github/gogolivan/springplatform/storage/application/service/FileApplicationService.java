@@ -1,6 +1,6 @@
 package com.github.gogolivan.springplatform.storage.application.service;
 
-import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileStoragePortFactory;
+import com.github.gogolivan.springplatform.storage.application.factory.FileStoragePortFactory;
 import com.github.gogolivan.springplatform.storage.domain.model.FileDomainModel;
 import com.github.gogolivan.springplatform.storage.domain.port.api.FileServicePort;
 import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileJpaPort;

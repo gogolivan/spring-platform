@@ -1,4 +1,4 @@
-package com.github.gogolivan.springplatform.storage.domain.port.spi.file;
+package com.github.gogolivan.springplatform.storage.application.exception;
 
 public class UnsupportedStorageException extends RuntimeException {
     public UnsupportedStorageException(String message) {
