@@ -59,3 +59,4 @@ https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started
 - https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html[Spring Security OAuth2 Resource Server]
 - https://docs.spring.io/spring-grpc/reference/index.html[Spring GRPC]
 - https://docs.asciidoctor.org/[Asciidoctor Docs]
+- https://mermaid.js.org/[Mermaid]
