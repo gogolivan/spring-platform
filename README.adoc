@@ -7,7 +7,7 @@ image::docs/images/architecture.svg[]
 == Modules
 === link:spring-platform-dependencies/README.adoc[Spring Platform Dependencies]
 
-Manages shared dependency versions.
+Centralized dependency versions management, combining a _Gradle Version Catalog_ link:gradle/libs.versions.toml[] and a _Java Platform_ plugin link:spring-platform-dependencies/build.gradle[].
 
 === link:spring-platform-spring-boot-starter/README.adoc[Spring Platform Spring Boot Starter]
 

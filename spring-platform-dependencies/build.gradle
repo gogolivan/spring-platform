@@ -23,6 +23,8 @@ dependencies {
     api(libs.guava)
     api(libs.commons.lang3)
     api(libs.archunit)
+    api(libs.mapstruct)
+    api(libs.mapstruct.processor)
 
     constraints {
     }

@@ -43,10 +43,12 @@ dependencies {
     implementation('io.opentelemetry:opentelemetry-exporter-otlp')
     implementation 'io.grpc:grpc-services'
     implementation 'org.springframework.grpc:spring-grpc-server-web-spring-boot-starter'
+    implementation 'org.mapstruct:mapstruct'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.mapstruct:mapstruct-processor'
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.grpc:spring-grpc-test'

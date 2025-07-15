@@ -14,5 +14,5 @@ With the `dev` _Spring_ profile, query execution statistics logging is enabled.
 == References
 
 - https://docs.spring.io/spring-data/jpa/reference/index.html[Spring Data JPA]
-
 - https://www.archunit.org/[ArchUnit]
+- https://mapstruct.org/[MapStruct]
