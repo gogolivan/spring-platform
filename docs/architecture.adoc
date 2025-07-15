@@ -5,36 +5,37 @@ Diagram as Code
 ....
 ---
 config:
-  theme: default
+  theme: neutral
+  layout: elk
 title: Spring Platform
 ---
 flowchart TB
     subgraph Services["Services"]
-            notification["notification"]
-            storage["storage"]
+        notification["notification"]
+        storage["storage"]
     end
     subgraph Backend["Backend"]
-            Services
-            gateway["Gateway"]
+        Services
+        gateway["Gateway"]
     end
     subgraph DB["DB"]
-            postgres[("Postgres")]
-            mongo[("MongoDB")]
+        postgres[("Postgres")]
+        mongo[("MongoDB")]
     end
     subgraph Storage["Storage"]
-            s3["S3"]
+        s3["S3"]
     end
     subgraph Workflow["Workflow"]
-            temporal["temporal"]
+        temporal["temporal"]
     end
     subgraph Auth["Auth"]
-            keycloak["keycloak"]
+        keycloak["keycloak"]
     end
     subgraph Backing["Backing"]
-            DB
-            Storage
-            Workflow
-            Auth
+        DB
+        Storage
+        Workflow
+        Auth
     end
     gateway L_gateway_Services_0@<--> Services
     storage L_storage_notification_0@-- grpc --> notification
@@ -42,7 +43,7 @@ flowchart TB
     Backend L_Backend_DB_0@<-- tcp --> DB
     Storage L_Storage_storage_0@<-- http --> storage
     Auth L_auth_Backend_0@<-- http --> Backend
-    n1["Untitled Node"] L_n1_gateway_0@<-- http </br>ws </br>graphql ---> gateway
+    n1["n1"] L_n1_gateway_0@<-- http <br>ws <br>graphql ---> gateway
     n1 L_n1_auth_0@<-- http --> Auth
     s3@{ shape: disk}
     n1@{ shape: sm-circ}
@@ -54,7 +55,4 @@ flowchart TB
     L_auth_Backend_0@{ animation: fast }
     L_n1_gateway_0@{ animation: fast }
     L_n1_auth_0@{ animation: slow }
-
 ....
-
-image:images/system-architecture-light.svg[]
