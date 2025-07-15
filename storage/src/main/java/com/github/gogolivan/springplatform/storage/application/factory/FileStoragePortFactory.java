@@ -16,13 +16,13 @@ public class FileStoragePortFactory {
 
     public FileStoragePort create(String path) {
         if (path.startsWith("s3://")) {
-            return fileSystemPort;
-        }
-
-        if (path.startsWith("file://")) {
             return s3Port;
         }
 
-        throw new UnsupportedStorageException("Invalid path: " + path);
+        if (path.startsWith("file://")) {
+            return fileSystemPort;
+        }
+
+        throw new UnsupportedStorageException("Invalid storage path: " + path);
     }
 }
