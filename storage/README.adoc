@@ -1,17 +1,18 @@
-# Storage
+= Storage
 
 File Storage implementation
 
-## Architecture
+== Architecture
 
 **Hexagonal architecture** is used.
 Package organization is structured by domain.
 
-### Debugging
+=== Debugging
 
 With the `dev` _Spring_ profile, query execution statistics logging is enabled.
 
-## References
+== References
 
-- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/reference/index.html)
-- [ArchUnit](https://www.archunit.org/)
+- https://docs.spring.io/spring-data/jpa/reference/index.html[Spring Data JPA]
+
+- https://www.archunit.org/[ArchUnit]

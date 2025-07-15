@@ -1,0 +1,14 @@
+= Notification
+
+
+== GraphQL
+=== GraphiQL
+
+http://localhost:8083/graphiql
+
+=== MongoDB
+
+== References
+- https://spring.io/projects/spring-graphql[Spring for GraphQL]
+- https://github.com/graphql-java/graphql-java-extended-scalars[Extended Scalars for GraphQL]
+- https://docs.spring.io/spring-data/mongodb/reference/index.html[Spring Data MongoDB]

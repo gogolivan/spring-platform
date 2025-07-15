@@ -5,23 +5,29 @@ _Spring Boot_ multi-module _Gradle_ project.
 image::docs/images/architecture.svg[]
 
 == Modules
-=== Spring Platform Dependencies
+=== link:spring-platform-dependencies/README.adoc[Spring Platform Dependencies]
+
 Manages shared dependency versions.
 
-=== Spring Platform Spring Boot Starter
+=== link:spring-platform-spring-boot-starter/README.adoc[Spring Platform Spring Boot Starter]
+
 Provides _Spring_ default configurations.
 
-=== Proto
+=== link:proto/README.adoc[Proto]
+
 Defines shared _Protocol Buffers_ (.proto) definitions.
 
-=== Gateway
+=== link:gateway/README.adoc[Gateway]
+
 Handles routing.
 
-=== Notification
+=== link:notification/README.adoc[Notification]
+
 Manages notifications using a **3-layer architecture**.
 Expose _GraphQL_ endpoint and uses MongoDB for data persistence.
 
-=== Storage
+=== link:storage/README.adoc[]
+
 Handles the storage, deletion, and updating of files using a **hexagonal architecture**.
 
 == Features
@@ -52,3 +58,4 @@ https://opentelemetry.io/docs/zero-code/java/spring-boot-starter/getting-started
 - https://docs.spring.io/spring-boot/reference/features/spring-application.html#features.spring-application.virtual-threads[Spring Boot Virtual Threads]
 - https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html[Spring Security OAuth2 Resource Server]
 - https://docs.spring.io/spring-grpc/reference/index.html[Spring GRPC]
+- https://docs.asciidoctor.org/[Asciidoctor Docs]
