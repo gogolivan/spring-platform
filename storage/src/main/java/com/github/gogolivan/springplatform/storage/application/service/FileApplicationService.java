@@ -1,6 +1,6 @@
-package com.github.gogolivan.springplatform.storage.application.file.service;
+package com.github.gogolivan.springplatform.storage.application.service;
 
-import com.github.gogolivan.springplatform.storage.application.file.factory.FileStoragePortFactory;
+import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileStoragePortFactory;
 import com.github.gogolivan.springplatform.storage.domain.model.FileDomainModel;
 import com.github.gogolivan.springplatform.storage.domain.port.api.FileServicePort;
 import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileJpaPort;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @Service
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class FileService implements FileServicePort {
+public class FileApplicationService implements FileServicePort {
     private final FileJpaPort fileJpaPort;
     private final FileStoragePortFactory fileStoragePortFactory;
 

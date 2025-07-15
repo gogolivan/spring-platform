@@ -1,9 +1,5 @@
-package com.github.gogolivan.springplatform.storage.application.file.factory;
+package com.github.gogolivan.springplatform.storage.domain.port.spi.file;
 
-import com.github.gogolivan.springplatform.storage.application.file.exception.UnsupportedStorageException;
-import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileStoragePort;
-import com.github.gogolivan.springplatform.storage.domain.port.spi.file.FileSystemFileStoragePort;
-import com.github.gogolivan.springplatform.storage.domain.port.spi.file.S3FileStoragePort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
