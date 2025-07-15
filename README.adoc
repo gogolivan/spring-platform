@@ -26,7 +26,7 @@ Handles routing.
 Manages notifications using a **3-layer architecture**.
 Expose _GraphQL_ endpoint and uses MongoDB for data persistence.
 
-=== link:storage/README.adoc[]
+=== link:storage/README.adoc[Storage]
 
 Handles the storage, deletion, and updating of files using a **hexagonal architecture**.
 
